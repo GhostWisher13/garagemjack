@@ -1,5 +1,4 @@
 from pathlib import Path
-from pathlib import Path
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +19,10 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "rest_framework_simplejwt",
-    # "usuario",
-    # "uploader",
-    "drf_spectacular",
+    "usuario",
     "garagem",
+    "uploader",
+    "drf_spectacular",
     "django_extensions",
 ]
 
@@ -107,6 +106,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+AUTH_USER_MODEL = "usuario.Usuario"
 
 MEDIA_URL = "http://localhost:8000/media/"
 MEDIA_ENDPOINT = "/media/"
